@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES62</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function makeArr()
+    {
+        
+    }
+    function Array(...arr)
+    {
+         this.array=arr;
+         this.length=arr.length;
+    }
+    
+    let a1=new Array(2,4,7);
+    Array.prototype.push=function(ele){
+         this.array.push(ele);
+         this.length++;
+    }
+    Array.prototype.pop=function(){
+         this.array.pop();
+         this.length--;
+    }
+    Array.prototype.top=function(){
+         return this.array[this.length-1];
+    }
+    Array.prototype.print=function(){
+        var box="";
+         for(var i=0;i<this.length;i++)
+         {
+             box=box+this.array[i]+" ";
+         }
+         console.log(box);
+    }
+    Array.prototype.printReverse=function(){
+        var box="";
+         for(var i=this.length-1;i>=0;i--)
+         {
+             box=box+this.array[i]+" ";
+         }
+         console.log(box);
+    }
+    Array.prototype.size=function(){
+         return this.array.length;
+    }
+    console.log(a1)
+    a1.push(9)
+    
+    console.log(a1)
+    
+    a1.pop();
+    console.log(a1);
+    console.log(a1.top());
+    a1.print();
+    a1.printReverse();
+    console.log(a1.size());
+</script>
