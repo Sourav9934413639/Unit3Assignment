@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Movies</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #bag{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            row-gap: 80px;
+        }
+        #bag>div{
+            background-color: darkblue;
+            cursor: pointer;
+        }
+        #tposter{
+            width:100%;
+        }
+        #head{
+            color: white;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="head">Trending Movies</h1>
+    <div id="bag"></div>
+</body>
+</html>
+<script src="scripts/trending.js"></script>

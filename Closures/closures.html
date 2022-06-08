@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            background-color: black;
+        }
+     #box{
+         
+         width: 15.4%;
+         height:350px;
+         overflow:scroll;
+         cursor: pointer;
+         margin-bottom: 50px;
+         background-color:white;
+     }
+     #container{
+         
+         border:1px solid darkblue;
+         height:auto;
+         background-color: darkblue;
+     }
+     #img_box{
+         width:30%;
+         height:auto;
+         cursor: pointer;
+         margin: auto;
+     }
+     #poster{
+         width:100%;
+     }
+     #movieName{
+         height: 25px;
+         width: 15%;
+         background-color: white;
+
+     }
+     
+     
+    </style>
+</head>
+<body>
+    <input type="text" id="movieName" oninput="debounce(main,1000)" placeholder="type here">
+    
+    
+    <div id="box"></div>
+    <div id="container"></div>
+</body>
+</html>
+<script src="scripts/closures.js"></script>
